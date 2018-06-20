@@ -31,10 +31,10 @@ public class button{
         JMenuBar mb1=new JMenuBar();
         JMenu file=new JMenu("file");
         mb1.add(file);
-        JMenuItem exit = new JMenuItem("exit");
-        file.add(exit);
+        
         JMenuItem option = new JMenuItem("option");
         file.add(option);
+        option.setIcon(new ImageIcon("c:\\optionicon.png"));
         JMenuItem open = new JMenuItem("open");
         file.add(open);
         JMenu tools=new JMenu("tools");
@@ -44,13 +44,16 @@ public class button{
         JMenu edit=new JMenu("edit");
         mb1.add(edit);
         JMenuItem gg = new JMenuItem("gg");
-        edit.add(gg);//enii frame togsoj bna
+        edit.add(gg);
+        JMenuItem exit = new JMenuItem("exit");
+        file.add(exit);//enii frame togsoj bna
+        exit.setIcon(new ImageIcon("c:\\eicon.png"));
 
         JMenuBar mb=new JMenuBar();// 2 dahi frame ehelj bna
         JMenu fl=new JMenu("file");
         mb.add(fl);
         JMenuItem e = new JMenuItem("exit");
-        file.add(e);
+        fl.add(e);
         JMenu t=new JMenu("tools");
         mb.add(t);
         JMenuItem la = new JMenuItem("ll");
@@ -99,33 +102,46 @@ public class button{
 
                 }
             });
+             e.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent e){
+                    System.exit(0);
+
+                }
+            });
+              exit.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent e){
+                    System.exit(0);
+
+                }
+            });
+
 
         p.setLayout(new BorderLayout());
         p1.setLayout(new BorderLayout());
 
         p.add(b);
-        b.setBounds(0,280,90,30);
+        b.setBounds(675 ,0,120,30);
         b.setBackground(Color.white);
         l.add(c);
-        bc.setBounds(0,320,90,30);
-        bc.setBackground(Color.white);
+        c.setBounds(0,0,90,30);
+        c.setBackground(Color.white);
         p.add(b1);
-        b1.setBounds(0,10,90,30);
+        b1.setBounds(105,0,90,30);
         b1.setBackground(Color.white);
         p.add(b2);
-        b2.setBounds(0,50,90,30);
+        b2.setBounds(200,0,90,30);
         b2.setBackground(Color.white);
         p.add(b3);
-        b3.setBounds(0,90,90,30);
+        b3.setBounds(295,0,90,30);
         b3.setBackground(Color.white);
         p.add(b4);
-        b4.setBounds(0,120,90,30);
+        b4.setBounds(390,0,90,30);
         b4.setBackground(Color.white);
         p.add(b5);
-        b5.setBounds(0,160,90,30);
+        b5.setBounds(485,0,90,30);
         b5.setBackground(Color.white);
         p.add(b6);
-        b6.setBounds(0,200,90,30);
+        b6.setBounds(580,0,90,30);
         b6.setBackground(Color.white);
         p.add(l);
         p1.add(b11);
@@ -143,7 +159,7 @@ public class button{
         p1.add(l1);
 
         l.add(bc);
-          bc.setBounds(0,240,90,30);
+          bc.setBounds( 1000,0,90,30);
         bc.setBackground(Color.white);
         f2.add(p);
         f2.setJMenuBar(mb);
