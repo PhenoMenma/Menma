@@ -32,17 +32,22 @@ public class button{
         JMenu file=new JMenu("file");
         mb1.add(file);
         
+        file.setIcon(new ImageIcon("c:\\fiicon.png"));
+        
         JMenuItem option = new JMenuItem("option");
         file.add(option);
         option.setIcon(new ImageIcon("c:\\optionicon.png"));
         JMenuItem open = new JMenuItem("open");
         file.add(open);
+        open.setIcon(new ImageIcon("c:\\ficon.png"));
         JMenu tools=new JMenu("tools");
         mb1.add(tools);
+          tools.setIcon(new ImageIcon("c:\\ticon.png"));
         JMenuItem ll = new JMenuItem("ll");
         tools.add(ll);
         JMenu edit=new JMenu("edit");
         mb1.add(edit);
+         edit.setIcon(new ImageIcon("c:\\edicon.png"));
         JMenuItem gg = new JMenuItem("gg");
         edit.add(gg);
         JMenuItem exit = new JMenuItem("exit");
@@ -52,14 +57,18 @@ public class button{
         JMenuBar mb=new JMenuBar();// 2 dahi frame ehelj bna
         JMenu fl=new JMenu("file");
         mb.add(fl);
+        fl.setIcon(new ImageIcon("c:\\fiicon.png"));
         JMenuItem e = new JMenuItem("exit");
         fl.add(e);
+        e.setIcon(new ImageIcon("c:\\eicon.png"));
         JMenu t=new JMenu("tools");
         mb.add(t);
+         t.setIcon(new ImageIcon("c:\\ticon.png"));
         JMenuItem la = new JMenuItem("ll");
         t.add(la);
         JMenu ed=new JMenu("edit");
         mb.add(ed);
+         ed.setIcon(new ImageIcon("c:\\edicon.png"));
         JMenuItem g = new JMenuItem("gg");
         ed.add(g);
         //2 dahi frame togsoj bna
@@ -78,7 +87,7 @@ public class button{
 
         JButton b1=new JButton("static");
         JButton b2=new JButton("static");
-        JButton b3=new JButton("static");
+        JButton b3=new JButton("Box Score");
         JButton b4=new JButton("static");
         JButton b5=new JButton("static");  
         JButton b6=new JButton("static");
@@ -88,6 +97,7 @@ public class button{
         JButton b14=new JButton("static");
         JButton b16=new JButton("static");
         JButton b15=new JButton("start"); 
+        b15.setIcon(new ImageIcon("c:\\sicon.png"));
         JButton bc=new JButton("print");
         b15.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e){
@@ -132,15 +142,15 @@ public class button{
         b2.setBounds(200,0,90,30);
         b2.setBackground(Color.white);
         p.add(b3);
-        b3.setBounds(295,0,90,30);
-        b3.setBackground(Color.white);
-        p.add(b4);
+        b3.setBounds(295,0,120,30);
+        b3.setBackground(Color.blue);
+       // p.add(b4);
         b4.setBounds(390,0,90,30);
         b4.setBackground(Color.white);
-        p.add(b5);
-        b5.setBounds(485,0,90,30);
+       // p.add(b5);
+      //  b5.setBounds(485,0,90,30);
         b5.setBackground(Color.white);
-        p.add(b6);
+       // p.add(b6);
         b6.setBounds(580,0,90,30);
         b6.setBackground(Color.white);
         p.add(l);
@@ -150,11 +160,11 @@ public class button{
         p1.add(b14);
         p1.add(b15);
 
-        b15.setBounds(0,100,90,30);
+        b15.setBounds(0,140,130,50);
         b15.setBackground(Color.white);
         p1.add(b16);
 
-        b16.setBounds(0,60,90,30);
+        b16.setBounds(0,80,130,50);
         b15.setBackground(Color.white);
         p1.add(l1);
 
