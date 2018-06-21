@@ -1,3 +1,4 @@
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -17,14 +18,14 @@ public class button{
 
         JLabel l=new JLabel();//frame ehelj bna
         JLabel l1=new JLabel();
-        l1.setIcon(new ImageIcon("c:\\10529dd.jpg"));
+        l1.setIcon(new ImageIcon("cc.png"));
         JFrame f=new JFrame("huslengiih");
         JFrame f2=new JFrame("huslengiih");
         f2.setSize(1360,768);
         f2.setResizable(false);
         f.setResizable(false);
         f.setVisible(true);
-        f.setSize(1360,768);
+        f.setSize(595,596);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         f.setLocationRelativeTo(null);
@@ -32,43 +33,43 @@ public class button{
         JMenu file=new JMenu("file");
         mb1.add(file);
         
-        file.setIcon(new ImageIcon("c:\\fiicon.png"));
+        file.setIcon(new ImageIcon("ficon.png"));
         
         JMenuItem option = new JMenuItem("option");
         file.add(option);
-        option.setIcon(new ImageIcon("c:\\optionicon.png"));
+        option.setIcon(new ImageIcon("opicon.png"));
         JMenuItem open = new JMenuItem("open");
         file.add(open);
-        open.setIcon(new ImageIcon("c:\\ficon.png"));
+        open.setIcon(new ImageIcon("oicon.png"));
         JMenu tools=new JMenu("tools");
         mb1.add(tools);
-          tools.setIcon(new ImageIcon("c:\\ticon.png"));
+          tools.setIcon(new ImageIcon("ticon.png"));
         JMenuItem ll = new JMenuItem("ll");
         tools.add(ll);
         JMenu edit=new JMenu("edit");
         mb1.add(edit);
-         edit.setIcon(new ImageIcon("c:\\edicon.png"));
+         edit.setIcon(new ImageIcon("edicon.png"));
         JMenuItem gg = new JMenuItem("gg");
         edit.add(gg);
         JMenuItem exit = new JMenuItem("exit");
         file.add(exit);//enii frame togsoj bna
-        exit.setIcon(new ImageIcon("c:\\eicon.png"));
+        exit.setIcon(new ImageIcon("e.png"));
 
         JMenuBar mb=new JMenuBar();// 2 dahi frame ehelj bna
         JMenu fl=new JMenu("file");
         mb.add(fl);
-        fl.setIcon(new ImageIcon("c:\\fiicon.png"));
+        fl.setIcon(new ImageIcon("ficon.png"));
         JMenuItem e = new JMenuItem("exit");
         fl.add(e);
-        e.setIcon(new ImageIcon("c:\\eicon.png"));
+        e.setIcon(new ImageIcon("e.png"));
         JMenu t=new JMenu("tools");
         mb.add(t);
-         t.setIcon(new ImageIcon("c:\\ticon.png"));
+         t.setIcon(new ImageIcon("ticon.png"));
         JMenuItem la = new JMenuItem("ll");
         t.add(la);
         JMenu ed=new JMenu("edit");
         mb.add(ed);
-         ed.setIcon(new ImageIcon("c:\\edicon.png"));
+         ed.setIcon(new ImageIcon("edicon.png"));
         JMenuItem g = new JMenuItem("gg");
         ed.add(g);
         //2 dahi frame togsoj bna
