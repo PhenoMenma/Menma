@@ -62,6 +62,12 @@ public class button{
         JMenuItem e = new JMenuItem("exit");
         fl.add(e);
         e.setIcon(new ImageIcon("e.png"));
+          e.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent e){
+                    System.exit(0);
+
+                }
+            });
         JMenu t=new JMenu("tools");
         mb.add(t);
          t.setIcon(new ImageIcon("ticon.png"));
@@ -113,12 +119,7 @@ public class button{
 
                 }
             });
-             e.addActionListener(new ActionListener(){
-                public void actionPerformed(ActionEvent e){
-                    System.exit(0);
-
-                }
-            });
+           
               exit.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e){
                     System.exit(0);

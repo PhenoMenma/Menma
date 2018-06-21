@@ -15,7 +15,7 @@ public class table extends JPanel
                          {"                ","","","","","","","","","",""},
                          {"                ","","","","","","","","","",""},};
         jt=new JTable(data,columns);
-        jt.setPreferredScrollableViewportSize(new Dimension(450,63));
+        jt.setPreferredScrollableViewportSize(new Dimension(900,63));
         jt.setFillsViewportHeight(true);
         JScrollPane jps=new JScrollPane(jt);
         add(jps);
