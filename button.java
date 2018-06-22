@@ -1,9 +1,10 @@
-
+import java.io.File;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.Dimension;
 import javax.swing.JScrollPane;
+import javax.swing.JFileChooser;
 public class button  {
 
     public ImageIcon g1;
@@ -20,7 +21,7 @@ public class button  {
 
         JLabel l=new JLabel();//frame ehelj bna
         JLabel l1=new JLabel();
-                l.setIcon(new ImageIcon("gg.jpg"));
+        l.setIcon(new ImageIcon("gg.jpg"));
 
         l1.setIcon(new ImageIcon("cc.png"));
         JFrame f=new JFrame("huslengiih");
@@ -34,10 +35,10 @@ public class button  {
 
         String[] columns={"     Player     ","P","PTS","REB","AST","STL","BLK","FG%","3P%","FT%","TOV"};
         String[][] data={{"                ","","","","","","","","","",""},
-                         {"                ","","","","","","","","","",""},
-                         {"                ","","","","","","","","","",""},
-                         {"                ","","","","","","","","","",""},
-                         {"                ","","","","","","","","","",""},};
+                {"                ","","","","","","","","","",""},
+                {"                ","","","","","","","","","",""},
+                {"                ","","","","","","","","","",""},
+                {"                ","","","","","","","","","",""},};
         JTable jt=new JTable(data,columns);
         JPanel p3=new JPanel();
         jt.setPreferredScrollableViewportSize(new Dimension(900,63));
@@ -48,9 +49,9 @@ public class button  {
 
         f3.setResizable(false);
         f3.setTitle("Box Score");
-        
+
         f3.setSize(900,900);
-        
+
         f3.add(p3);
 
         f.setLocationRelativeTo(null);
@@ -63,9 +64,26 @@ public class button  {
         JMenuItem option = new JMenuItem("option");
         file.add(option);
         option.setIcon(new ImageIcon("opicon.png"));
-        JMenuItem open = new JMenuItem("open");
-        file.add(open);
-        open.setIcon(new ImageIcon("oicon.png"));
+        JMenuItem o = new JMenuItem("open");
+        file.add(o);
+        o.setIcon(new ImageIcon("oicon.png"));
+        o.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent e){
+
+                    JButton op =new JButton("open");
+
+                    JFileChooser flc=new JFileChooser();
+                    flc.setCurrentDirectory(new File("Desktop/hvslen"));
+                    flc.setDialogTitle("hello");
+                    flc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+
+                    if(flc.showOpenDialog(op)==JFileChooser.APPROVE_OPTION)
+                    {
+
+                    }
+
+                }
+            });
         JMenu tools=new JMenu("tools");
         mb1.add(tools);
         tools.setIcon(new ImageIcon("ticon.png"));
@@ -123,8 +141,6 @@ public class button  {
         b3.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e){
                     f3.setVisible(true);
-                    
-                     
 
                 }
             });
@@ -136,6 +152,7 @@ public class button  {
         JButton b13=new JButton("static");
         JButton b14=new JButton("Quit");
         JButton b16=new JButton("static");
+       
         JButton b15=new JButton("start"); 
         b15.setIcon(new ImageIcon("c:\\sicon.png"));
         JButton bc=new JButton("print");
@@ -169,7 +186,7 @@ public class button  {
         l.add(c);
         c.setBounds(0,0,90,30);
         c.setBackground(Color.white);
-       // p.add(b1);
+        // p.add(b1);
         b1.setBounds(105,0,90,30);
         b1.setBackground(Color.white);
         //p.add(b2);
@@ -200,9 +217,9 @@ public class button  {
 
         b16.setBounds(0,80,130,50);
         b16.setBackground(Color.white);
-         b14.setBounds(0,200,130,50);
+        b14.setBounds(0,200,130,50);
         b14.setBackground(Color.white);
-          b14.addActionListener(new ActionListener(){
+        b14.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e){
                     System.exit(0);
 
@@ -219,7 +236,6 @@ public class button  {
         f.add(p1);
 
     }
-
     public static void main()
     {
         new button();
