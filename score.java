@@ -29,36 +29,36 @@ public class score
         JLabel l=new JLabel();//frame ehelj bna
         JPanel p=new JPanel();
         p.setBackground(Color.black);
-        JFrame f=new JFrame("huslengiih");
-        f.setResizable(false);
-        f.setVisible(true);
-        f.setSize(595,596);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame f4=new JFrame("huslengiih");
+        f4.setResizable(false);
+        f4.setVisible(true);
+        f4.setSize(900,900);
+        f4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         p.setLayout(new BorderLayout());
-        jps.setBounds(95,0,400,400);
+        jps.setBounds(95,200,710,400);
         JButton b=new JButton("+3");
-        b.setBounds(510,0,80,40);
+        b.setBounds(820,230,80,40);
         b.setBackground(Color.white);
         JButton b1=new JButton("+3");
-        b1.setBounds(0,0,80,40);
+        b1.setBounds(0,230,80,40);
         b1.setBackground(Color.white);
         JButton b2=new JButton("+2");
-        b2.setBounds(510,50,80,40);
+        b2.setBounds(820,280,80,40);
         b2.setBackground(Color.white);             
         JButton b3=new JButton("+2");
-        b3.setBounds(0,50,80,40);
+        b3.setBounds(0,280,80,40);
         b3.setBackground(Color.white);
         JButton b4=new JButton("+1");
-        b4.setBounds(510,100,80,40);
+        b4.setBounds(820,330,80,40);
         b4.setBackground(Color.white);
         JButton b5=new JButton("+1");
-        b5.setBounds(0,100,80,40);
+        b5.setBounds(0,330,80,40);
         b5.setBackground(Color.white);
         JButton b6=new JButton("-1");
-        b6.setBounds(0,150,80,40);
+        b6.setBounds(0,380,80,40);
         b6.setBackground(Color.white);
         JButton b7=new JButton("-1");
-        b7.setBounds(510,150,80,40);
+        b7.setBounds(820,380,80,40);
         b7.setBackground(Color.white);
         JMenuBar mb=new JMenuBar();
               JMenu file=new JMenu("file");
@@ -86,9 +86,10 @@ public class score
         p.add(b7);
         p.add(l);
         //l.add(t);
-        f.add(p);
-        f.setJMenuBar(mb);
-
+        f4.add(p);
+        f4.setJMenuBar(mb);
+        button bt =new button();
+        
     }
 
     public static void main()

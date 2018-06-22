@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.Dimension;
 import javax.swing.JScrollPane;
-public class button{
+public class button  {
 
     public ImageIcon g1;
     public JLabel l1;
@@ -123,6 +123,8 @@ public class button{
         b3.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e){
                     f3.setVisible(true);
+                    
+                     
 
                 }
             });
@@ -132,7 +134,7 @@ public class button{
         JButton b11=new JButton("static");
         JButton b12=new JButton("static");
         JButton b13=new JButton("static");
-        JButton b14=new JButton("static");
+        JButton b14=new JButton("Quit");
         JButton b16=new JButton("static");
         JButton b15=new JButton("start"); 
         b15.setIcon(new ImageIcon("c:\\sicon.png"));
@@ -197,7 +199,15 @@ public class button{
         p1.add(b16);
 
         b16.setBounds(0,80,130,50);
-        b15.setBackground(Color.white);
+        b16.setBackground(Color.white);
+         b14.setBounds(0,200,130,50);
+        b14.setBackground(Color.white);
+          b14.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent e){
+                    System.exit(0);
+
+                }
+            });
         p1.add(l1);
 
         l.add(bc);
