@@ -10,12 +10,11 @@ public class button  {
     public ImageIcon g1;
     public JLabel l1;
 
-    public button(){
-        gui(); 
-    }
+    private boolean packFrame = false;
 
-    public void gui()
-    {
+    public final static String APP_NAME = "Countdown Timer";
+    public button(String strConfigFile){
+
         String[] items={"Zelme","Baynmonh","Uugandorj","Tvmenhvslen","ff","ff","ff","ff","ff","ff"};
         JComboBox c=new JComboBox(items);
 
@@ -25,7 +24,7 @@ public class button  {
 
         l1.setIcon(new ImageIcon("cc.png"));
         JFrame f=new JFrame("huslengiih");
-        JFrame f2=new JFrame("huslengiih");
+        JFrame f2=new JFrame("goy2");
         f2.setSize(640,400);
         f2.setResizable(false);
         f.setResizable(false);
@@ -144,7 +143,30 @@ public class button  {
 
                 }
             });
-        JButton b4=new JButton("static");
+        JButton b4=new JButton("timer");
+        b4.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent e){
+                    ConfigureTimer frame = new ConfigureTimer(strConfigFile);
+                    if (packFrame) {
+                        frame.pack();
+                    } else {
+                        frame.validate();
+                    }
+                    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+                    Dimension frameSize = frame.getSize();
+
+                    if (frameSize.height > screenSize.height) {
+                        frameSize.height = screenSize.height;
+                    }
+                    if (frameSize.width > screenSize.width) {
+                        frameSize.width = screenSize.width;
+                    }
+                    frame.setLocation((screenSize.width - frameSize.width) / 2,
+                        (screenSize.height - frameSize.height) / 2);
+                    frame.setVisible(true);
+
+                }
+            });
         JButton b5=new JButton("static");  
         JButton b6=new JButton("static");
         JButton b11=new JButton("static");
@@ -152,7 +174,7 @@ public class button  {
         JButton b13=new JButton("static");
         JButton b14=new JButton("Quit");
         JButton b16=new JButton("static");
-       
+
         JButton b15=new JButton("start"); 
         b15.setIcon(new ImageIcon("c:\\sicon.png"));
         JButton bc=new JButton("print");
@@ -193,10 +215,11 @@ public class button  {
         b2.setBounds(200,0,90,30);
         b2.setBackground(Color.white);
         p.add(b3);
+
         b3.setBounds(105,0,120,30);
         b3.setBackground(Color.blue);
-        // p.add(b4);
-        b4.setBounds(390,0,90,30);
+        p.add(b4);
+        b4.setBounds(520,0,120,30);
         b4.setBackground(Color.white);
         // p.add(b5);
         //  b5.setBounds(485,0,90,30);
@@ -236,9 +259,20 @@ public class button  {
         f.add(p1);
 
     }
-    public static void main()
+
+    public static void main(String[] args)
     {
-        new button();
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        if (args.length > 0) {
+            new button(args[0]);
+        } else {
+            new button(null);
+        }
 
     }
 

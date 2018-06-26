@@ -12,9 +12,9 @@ public class timer
         JFrame f=new JFrame("timer");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Date d=new Date();
-        SpinnerDateModel s=new SpinnerDateModel(d,null,null,Calendar.HOUR_OF_DAY);
+       SpinnerDateModel s=new SpinnerDateModel(d,null,null,Calendar.HOUR_OF_DAY);
         JSpinner spinner=new JSpinner(s);
-        JSpinner.DateEditor de=new JSpinner.DateEditor(spinner,"HH:mm:ss");
+        JSpinner.DateEditor de=new JSpinner.DateEditor(spinner,"hh:mm:ss");
         spinner.setEditor(de);
         f.add(spinner,BorderLayout.NORTH);
         f.setSize(100,100);
