@@ -11,7 +11,12 @@ public class score1
         String[][] data={{"              ","       "},};
         JTable jt=new JTable(data,columns);
         JPanel p4=new JPanel();
-         p4.setBackground(Color.black);
+        JTextField t1=new JTextField("00");
+            t1.setBounds(95,220,355,380);
+        JTextField t2=new JTextField();
+        String s1=t1.getText();
+        int a=Integer.parseInt(s1);
+        p4.setBackground(Color.black);
         JLabel l4=new JLabel();
         jt.setFillsViewportHeight(true);
         JScrollPane jps=new JScrollPane(jt);
@@ -23,10 +28,19 @@ public class score1
         f4.setVisible(true);
         f4.setSize(900,900);
         f4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f4.add(p4);
-          p4.setLayout(new BorderLayout());
+       
+        p4.setLayout(new BorderLayout());
         jps.setBounds(95,200,710,400);
         JButton b444=new JButton("+3");
+        b444.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent e){
+                    String s1=t1.getText();
+                    int a=Integer.parseInt(s1);
+                    a=a+3;
+                    t1.setText(""+a);
+
+                }
+            });
         b444.setBounds(820,230,80,40);
         b444.setBackground(Color.white);
         JButton b144=new JButton("+3");
@@ -66,6 +80,7 @@ public class score1
                 }
             });
         l4.add(jps);
+          l4.add(t1);
         p4.add(b444);
         p4.add(b144);
         p4.add(b24);
@@ -75,6 +90,7 @@ public class score1
         p4.add(b64);
         p4.add(b74);
         p4.add(l4);
+      
         //l.add(t);
         f4.add(p4);
 
