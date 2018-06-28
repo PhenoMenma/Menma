@@ -15,6 +15,8 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
+import javax.swing.*;
+import java.awt.*;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -268,6 +270,10 @@ public class DisplayTimer extends JDialog {
             iSecond = 0;
         }
         setTime(true);
+       
+             
+
+      
 
         // layout of components
         getContentPane().add(lblCaption, null);

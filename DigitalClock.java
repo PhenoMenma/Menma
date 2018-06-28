@@ -31,6 +31,7 @@ public class DigitalClock {
     f.getContentPane().setBackground(Color.black);
  
     f.setVisible(true);
+      f.setResizable(false);
   }
 }
  
