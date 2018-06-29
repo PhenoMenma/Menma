@@ -31,7 +31,7 @@ import javax.swing.Timer;
 
 public class DisplayTimer extends JDialog {
     
-    private static final long serialVersionUID = -53321692610649523L;
+
 
     private int iMinute = 0;
     

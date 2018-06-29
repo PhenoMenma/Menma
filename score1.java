@@ -12,14 +12,12 @@ public class score1
         f4.setResizable(false);
         f4.setTitle("table");
         f4.setVisible(true);
-
         //f4.setSize(1350,900);
         f4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Toolkit tk=Toolkit.getDefaultToolkit();
         int xsize=(int) tk.getScreenSize().getWidth();
         int ysize=(int) tk.getScreenSize().getHeight();
         f4.setSize(xsize,ysize);
-
         JTable jt=new JTable();
         JTable jt2=new JTable();
         JTable jt3=new JTable();
@@ -77,20 +75,17 @@ public class score1
         int b=Integer.parseInt(s2); 
         p4.setBackground(Color.black);
         JLabel l4=new JLabel();
-
         //l4.setIcon(new ImageIcon("score.jpg"));
         jt.setFillsViewportHeight(true);
         JScrollPane jps=new JScrollPane(jt);
         jt2.setFillsViewportHeight(true);
         JScrollPane jps2=new JScrollPane(jt2);
-
         p4.add(jps2);
         p4.add(jps);
         p4.add(jps3);
         p4.add(jps4);
         p4.add(jps5);
         p4.add(jps6);
-
         p4.setLayout(new BorderLayout());
         jps.setBounds(27,505,535,300);
         jps3.setBounds(37,390,600,100);
