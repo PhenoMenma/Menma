@@ -88,8 +88,7 @@ public class DisplayTimer extends JDialog {
     /** Flag, if timer should close when reaching zero. */
     private boolean bDisposeOnZero = false;
 
-    /** Thread for playing wavs. */
-    private WAVThread thrWavPlay = new WAVThread();
+   
 
     /** Clip for WAV-Playing. */
     public static Clip newClip = null;

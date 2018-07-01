@@ -32,16 +32,20 @@ public class CountdownTimer extends JFrame  {
     public class event implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             int count = (int)(Double.parseDouble(tf.getText()));
-            timerLabel.setText("Time left: " + count);
+            timerLabel.setText("Time left: " +count);
+            timerLabel.setText("Time left1: " +minut);
             TimeClass tc = new TimeClass(count);
             timer = new Timer(1000, tc);
             timer.start();
+            
+           
            
         }
     }
     public class TimeClass implements ActionListener {
         int counter;
-        public TimeClass(int counter) {
+       
+        public TimeClass(int countert) {
             this.counter= counter;
    }
         public void actionPerformed(ActionEvent tc) {
